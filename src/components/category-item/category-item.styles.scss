@@ -14,15 +14,17 @@
 	}
 
 	.category-container__body {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
-		padding: 30px;
-		color: white;
+		display: inline-block;
+		position: absolute;
 		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
 		text-shadow: 2px 2px 2px #000;
+		background: rgba(148, 148, 148, 0.75);
+		padding: 1.5rem 4rem;
+		border-radius: 1rem;
 	}
 }
 
