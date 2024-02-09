@@ -1,29 +1,25 @@
+import './categories.styles.scss';
+import violinBackground from './assets/violin-bg.jpg';
+import violaBackground from './assets/viola-bg.jpg';
+import celloBackground from './assets/cello-bg.jpg';
+import doubleBassBackground from './assets/double-bass-bg.jpg';
+import accessoriesBackground from './assets/accessories-bg.jpg';
+import CategoryItem from './components/category-item';
+
 const App = () => {
+	const categories = [
+		{ id: 1, title: 'Violins', image: violinBackground },
+		{ id: 2, title: 'Violas', image: violaBackground },
+		{ id: 3, title: 'Cellos', image: celloBackground },
+		{ id: 4, title: 'Double Basses', image: doubleBassBackground },
+		{ id: 5, title: 'Accessories', image: accessoriesBackground },
+	];
+
 	return (
 		<div className='categories-container'>
-			<div className='category-container'>
-				{/* <img /> */}
-				<div className='category-body-container'>
-					<h2>Violins</h2>
-					<p>Shop Now</p>
-				</div>
-				<div className='category-body-container'>
-					<h2>Violas</h2>
-					<p>Shop Now</p>
-				</div>
-				<div className='category-body-container'>
-					<h2>Cellos</h2>
-					<p>Shop Now</p>
-				</div>
-				<div className='category-body-container'>
-					<h2>Double Basses</h2>
-					<p>Shop Now</p>
-				</div>
-				<div className='category-body-container'>
-					<h2>Accessories</h2>
-					<p>Shop Now</p>
-				</div>
-			</div>
+			{categories.map((category) => (
+				<CategoryItem key={category.id} category={category} />
+			))}
 		</div>
 	);
 };
