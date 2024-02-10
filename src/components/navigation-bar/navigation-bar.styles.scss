@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.navigation-bar {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	padding: 1rem;
+	margin: 0px auto;
+	align-items: center;
+
+	&__logo {
+		font-family: 'Imperial Script', cursive;
+		text-decoration: none;
+		background: linear-gradient(to right, #b5b5b5, #e8e8e8, #ffffff);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		padding: 0px 1rem;
+		font-size: 2.5rem;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		font-family: 'Playfair Display', serif;
+		text-decoration: none;
+		color: #d5d5d5;
+		font-size: 1.5rem;
+		margin-right: 1rem;
+		padding-bottom: 0.5rem;
+		transition: all ease-in 0.25s;
+		font-weight: bold;
+		letter-spacing: 0.1rem;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	.basket {
+		fill: #d5d5d5;
+		transition: all ease-in 0.25s;
+
+		&:hover {
+			fill: #fff;
+		}
+	}
+}
