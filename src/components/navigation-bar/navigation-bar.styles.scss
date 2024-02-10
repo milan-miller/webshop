@@ -12,7 +12,11 @@
 	&__logo {
 		font-family: 'Imperial Script', cursive;
 		text-decoration: none;
-		background: linear-gradient(to right, #b5b5b5, #e8e8e8, #ffffff);
+		background: linear-gradient(
+			to right,
+			var(--secondary-color),
+			var(--primary-color)
+		);
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
@@ -28,7 +32,7 @@
 	&__link {
 		font-family: 'Playfair Display', serif;
 		text-decoration: none;
-		color: #d5d5d5;
+		color: var(--links-color);
 		font-size: 1.5rem;
 		margin-right: 1rem;
 		padding-bottom: 0.5rem;
@@ -37,16 +41,16 @@
 		letter-spacing: 0.1rem;
 
 		&:hover {
-			color: #fff;
+			color: var(--primary-color);
 		}
 	}
 
 	.basket {
-		fill: #d5d5d5;
+		fill: var(--links-color);
 		transition: all ease-in 0.25s;
 
 		&:hover {
-			fill: #fff;
+			fill: var(--primary-color);
 		}
 	}
 }

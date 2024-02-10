@@ -1,3 +1,11 @@
+:root {
+	--primary-color: #fff;
+	--secondary-color: #b5b5b5;
+	--links-color: #d5d5d5;
+	--primary-bg-color: #000;
+	--category-bg-color: #949494bf;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -16,8 +24,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 2rem;
-	background-color: #000;
-	color: #fff;
+	background-color: var(--primary-bg-color);
+	color: var(--primary-color);
 }
 
 code {
