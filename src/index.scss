@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 :root {
 	--primary-color: #fff;
 	--secondary-color: #b5b5b5;
@@ -23,7 +26,6 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: 2rem;
 	background-color: var(--primary-bg-color);
 	color: var(--primary-color);
 }
