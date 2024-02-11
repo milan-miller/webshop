@@ -20,6 +20,9 @@ const NavigationBar = () => {
 						SIGN IN
 					</Link>
 					<Link className='navigation-bar__link basket' to='/basket'>
+						<div className='basket-amount'>
+							<p>10</p>
+						</div>
 						<ShoppingBasket title='' />
 					</Link>
 				</div>

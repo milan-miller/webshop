@@ -3,9 +3,12 @@
 	flex: 31%;
 	position: relative;
 	margin: 1rem;
-	min-height: 25vh;
+	min-height: 30rem;
 	overflow: hidden;
 	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&:hover {
 		.background-image {
@@ -15,12 +18,7 @@
 	}
 
 	.category-container__body {
-		display: inline-block;
-		position: absolute;
 		text-align: center;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		text-shadow: 2px 2px 2px #000;
 		background: var(--category-bg-color);
 		padding: 1.5rem 4rem;

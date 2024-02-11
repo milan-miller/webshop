@@ -37,17 +37,34 @@
 		font-weight: bold;
 		letter-spacing: 0.1rem;
 
-		&:hover {
+		&:not(:last-child):hover {
 			color: var(--primary-color);
 		}
 	}
 
 	.basket {
 		fill: var(--links-color);
-		transition: all ease-in 0.25s;
+		transition: fill ease-in 0.25s;
+		position: relative;
 
 		&:hover {
 			fill: var(--primary-color);
+		}
+
+		&-amount {
+			position: absolute;
+			background: linear-gradient(#c27a26, #9a4535);
+			font-size: 1.6rem;
+			border-radius: 0.7rem;
+			padding: 0rem 0.5rem;
+			display: flex;
+			justify-content: center;
+			min-width: 3rem;
+			min-height: 2.5rem;
+			left: 100%;
+			top: -30%;
+			line-height: 2rem;
+			color: var(--primary-color);
 		}
 	}
 }
