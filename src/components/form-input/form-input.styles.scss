@@ -2,4 +2,32 @@
 	display: flex;
 	flex-direction: column;
 	margin: 1rem 0rem;
+
+	label {
+		visibility: hidden;
+	}
+
+	input {
+		border: none;
+		background: none;
+		border-bottom: 2px solid var(--secondary-color);
+		padding: 1rem 0rem;
+		color: #fff;
+		transition: all 0.25s ease-in;
+		position: relative;
+
+		&:focus {
+			border-bottom-color: var(--primary-color); /* New color on focus */
+			width: 100%;
+			outline: none;
+			&::placeholder {
+				color: var(--primary-color);
+			}
+		}
+
+		&::placeholder {
+			color: var(--secondary-color);
+			transition: all ease-in 0.25s;
+		}
+	}
 }

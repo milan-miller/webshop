@@ -4,7 +4,7 @@ const FormInput = ({ label, ...otherProps }) => {
 	return (
 		<div className='form-input'>
 			<label>{label}</label>
-			<input {...otherProps} />
+			<input placeholder={label} {...otherProps} />
 		</div>
 	);
 };
