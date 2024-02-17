@@ -1,3 +1,4 @@
+import './register-form.styles.scss';
 import { useState } from 'react';
 import {
 	createAuthUserWithEmailAndPassword,
@@ -5,6 +6,7 @@ import {
 } from '../../utils/firebase/firebase.utils';
 
 import FormInput from '../form-input/form-input.component';
+import Button from '../button/button.component';
 
 const initialRegisterInputData = {
 	displayName: '',
@@ -60,9 +62,10 @@ const RegisterForm = () => {
 	};
 
 	return (
-		<>
-			<h1>Register with your email and password</h1>
-			<form onSubmit={handleSubmit}>
+		<div className='register-container'>
+			<h2>Don't have an account?</h2>
+			<span>Register with your email and password</span>
+			<form className='register-container__form' onSubmit={handleSubmit}>
 				<FormInput
 					label='Username'
 					type='text'
@@ -96,9 +99,9 @@ const RegisterForm = () => {
 					onChange={(e) => onChangeHandler(e)}
 				/>
 
-				<button type='submit'>Register</button>
+				<Button type='submit'>REGISTER</Button>
 			</form>
-		</>
+		</div>
 	);
 };
 
