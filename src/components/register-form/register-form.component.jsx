@@ -30,8 +30,6 @@ const RegisterForm = () => {
 			...registerInputData,
 			[name]: value,
 		});
-
-		console.log(registerInputData);
 	};
 
 	const handleSubmit = async (event) => {

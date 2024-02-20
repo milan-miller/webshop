@@ -1,7 +1,5 @@
 .button-container {
 	padding: 1rem;
-	align-self: flex-end;
-	margin-top: 1rem;
 	color: #000;
 	border: none;
 	border-radius: 0.5rem;
@@ -12,6 +10,7 @@
 	);
 	font-family: serif;
 	font-weight: bold;
+	margin-top: auto;
 
 	&:hover {
 		cursor: pointer;

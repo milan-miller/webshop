@@ -1,0 +1,10 @@
+.authentication-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5rem;
+
+	&__form {
+		display: flex;
+	}
+}
