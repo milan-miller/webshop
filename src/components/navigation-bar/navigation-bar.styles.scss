@@ -6,6 +6,10 @@
 	margin: 0px auto;
 	align-items: center;
 
+	span {
+		cursor: pointer;
+	}
+
 	&__logo {
 		font-family: 'Imperial Script', cursive;
 		text-decoration: none;

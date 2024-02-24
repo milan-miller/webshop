@@ -1,8 +1,19 @@
 import './navigation-bar.styles.scss';
+import { useContext } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { ReactComponent as ShoppingBasket } from '../../assets/shopping-basket.svg';
+import { UserContext } from '../../contexts/user.context';
+import { signOutUser } from '../../utils/firebase/firebase.utils';
 
 const NavigationBar = () => {
+	const { currentUser, setCurrentUser } = useContext(UserContext);
+	console.log('From navbar ', currentUser);
+
+	const signOutHandler = async () => {
+		await signOutUser();
+		setCurrentUser(null);
+	};
+
 	return (
 		<>
 			<div className='navigation-bar'>
@@ -16,9 +27,16 @@ const NavigationBar = () => {
 					<Link className='navigation-bar__link' to='/contact'>
 						CONTACT
 					</Link>
-					<Link className='navigation-bar__link' to='/auth'>
-						SIGN IN
-					</Link>
+					{currentUser ? (
+						<span className='navigation-bar__link' onClick={signOutHandler}>
+							SIGN OUT
+						</span>
+					) : (
+						<Link className='navigation-bar__link' to='/auth'>
+							SIGN IN
+						</Link>
+					)}
+
 					<Link className='navigation-bar__link basket' to='/basket'>
 						<div className='basket-amount'>
 							<p>10</p>
