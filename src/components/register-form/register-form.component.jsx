@@ -1,6 +1,5 @@
 import './register-form.styles.scss';
-import { useState, useContext } from 'react';
-import { UserContext } from '../../contexts/user.context';
+import { useState } from 'react';
 import {
 	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth,
@@ -21,8 +20,6 @@ const RegisterForm = () => {
 		initialRegisterInputData
 	);
 	const { displayName, email, password, confirmPassword } = registerInputData;
-
-	const { setCurrentUser } = useContext(UserContext);
 
 	const onChangeHandler = (event) => {
 		event.preventDefault();
@@ -45,8 +42,6 @@ const RegisterForm = () => {
 				email,
 				password
 			);
-
-			setCurrentUser(user);
 
 			await createUserDocumentFromAuth(user, { displayName });
 
